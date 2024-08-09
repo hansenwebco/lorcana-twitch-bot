@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lorcana Twitch Bot</title>
+
+</head>
+
+<body id="main">
+
+  <br /><br />
+  <div class="container">
+    <div class="row">
+      <div class="col text-center">
+        <h3>A Card Bot Overlay for Lorcana!</h3>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+
+        <br />
+
+
+        <div id="configure">
+          <br/>
+          <!--
+          <div class="d-flex justify-content-center">
+            <img height="300" class="img-fluid" id="screenshot" alt="Screenshot of Overlay" src="media/images/header.png">
+          </div>
+          -->
+          <div class="row">
+            <div class="col">
+              <span class="field-desc">Your Channel Name:</span>
+              <input type="text" class="form-control form-control-sm" required="true" placeholder="Channel Name" aria-describedby="createLink" id="channel">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <span class="field-desc">Display Duration:</span>
+              <input type="number" autocomplete="off" class="form-control form-control-sm" value="8" aria-describedby="createLink" id="display-length">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <input type="button" class="btn btn-sm btn-primary" id="createLink" value="Get Browser Source" onclick="generateLink();">
+            </div>
+          </div>
+        </div>
+
+        <div id="botlink" class="hidden">
+          <!--
+          <div class="row">
+            <div class="d-flex justify-content-center">
+              <img height="300" id="screenshot" alt="Screenshot of Overlay" src="media/images/header.png">
+            </div>
+          </div>
+          -->
+          <div class="row">
+            <div class="col">
+              <br />
+              Add the link below as a browser source, users can then use <i>!card cardname</i> to look up cards in your Twitch chat.<br /><br />
+            </div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <div class="input-group input-group-sm mb-3">
+                <input type="text" class="form-control" aria-describedby="getUrl" readonly onclick="this.select();" id="overlay-url">
+                <input type="button" class="btn btn-sm btn-primary" id="getUrl" value="Copy" onclick="navigator.clipboard.writeText(document.getElementById('overlay-url').value);">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <div id="footer">Created by <a target="_blank" href="https://www.stonedonkey.com">stonedonkey</a> - Follow on <a target="_blank" href="https://twitch.tv/stonedonkey">Twitch</a> - <a target="_blank" href="https://mastodon.social/@stonedonkey">Mastodon</a>
+    <br/><br/> <a target="_blank" href="https://github.com/hansenwebco/marvel-snap-draft">Github</a> - <a target="_blank" href="https://github.com/hansenwebco/marvel-snap-draft/issues">Bugs</a></div>
+    
+  <script src="dist/dist.js"></script>
+</body>
+
+</html>
